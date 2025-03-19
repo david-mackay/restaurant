@@ -1,22 +1,22 @@
 // Restaurant information
 export const RESTAURANT_NAME = process.env.NEXT_PUBLIC_RESTAURANT_NAME || "Ye's Apothecary";
 export const RESTAURANT_TAGLINE = process.env.NEXT_PUBLIC_RESTAURANT_TAGLINE || '';
-export const RESTAURANT_ADDRESS = process.env.NEXT_PUBLIC_RESTAURANT_ADDRESS || '123 Bourbon Street, New Orleans, LA 70116';
-export const RESTAURANT_PHONE = process.env.NEXT_PUBLIC_RESTAURANT_PHONE || '(504) 555-1234';
-export const RESTAURANT_EMAIL = process.env.NEXT_PUBLIC_RESTAURANT_EMAIL || 'info@speakeasy.com';
+export const RESTAURANT_ADDRESS = process.env.NEXT_PUBLIC_RESTAURANT_ADDRESS || '119 Orchard Street, New York, NY 10003';
+export const RESTAURANT_PHONE = process.env.NEXT_PUBLIC_RESTAURANT_PHONE || '(929) 655-251';
+export const RESTAURANT_EMAIL = process.env.NEXT_PUBLIC_RESTAURANT_EMAIL || 'missyeapothecary@gmail.com';
 
 // Social media
 export const SOCIAL_MEDIA = {
-  instagram: process.env.NEXT_PUBLIC_INSTAGRAM_URL || 'https://instagram.com',
-  facebook: process.env.NEXT_PUBLIC_FACEBOOK_URL || 'https://facebook.com',
-  twitter: process.env.NEXT_PUBLIC_TWITTER_URL || 'https://twitter.com',
+  instagram: process.env.NEXT_PUBLIC_INSTAGRAM_URL || 'https://instagram.com/yesapothecary',
+  facebook: process.env.NEXT_PUBLIC_FACEBOOK_URL || 'https://facebook.com/yesapothecary',
+  twitter: process.env.NEXT_PUBLIC_TWITTER_URL || 'https://twitter.com/yesapothecary',
 };
 
 // Business hours
 export const BUSINESS_HOURS = {
   weekday: process.env.NEXT_PUBLIC_HOURS_WEEKDAY || 'Tuesday - Thursday: 5pm - 12am',
-  weekend: process.env.NEXT_PUBLIC_HOURS_WEEKEND || 'Friday - Saturday: 5pm - 2am',
-  sundayMonday: process.env.NEXT_PUBLIC_HOURS_SUNDAY_MONDAY || 'Sunday - Monday: Closed',
+  weekend: process.env.NEXT_PUBLIC_HOURS_WEEKEND || 'Friday - Saturday: 5pm - 1am',
+  sundayMonday: process.env.NEXT_PUBLIC_HOURS_SUNDAY_MONDAY || 'Sunday : 5pm - 12am',
 };
 
 // Media

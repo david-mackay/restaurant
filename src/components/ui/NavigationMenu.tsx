@@ -9,6 +9,12 @@ interface NavigationMenuProps {
   onClose: () => void;
 }
 
+interface MenuItem {
+  name: string;
+  path: string;
+  external?: boolean;
+}
+
 export const NavigationMenu = ({ isOpen, onClose }: NavigationMenuProps) => {
   const pathname = usePathname();
   
@@ -32,12 +38,12 @@ export const NavigationMenu = ({ isOpen, onClose }: NavigationMenuProps) => {
     };
   }, [isOpen]);
 
-  const menuItems = [
+  const menuItems: MenuItem[] = [
     { name: 'Home', path: '/' },
     { name: 'Food', path: '/food' },
     { name: 'Drinks', path: '/drinks' },
     { name: 'Contact', path: '/contact' },
-    { name: 'Reservations', path: '/reservations' },
+    { name: 'Reservations', path: 'https://resy.com/cities/ny/yes-apothecary', external: true },
     { name: 'Gallery', path: '/gallery' },
   ];
 
@@ -52,13 +58,25 @@ export const NavigationMenu = ({ isOpen, onClose }: NavigationMenuProps) => {
         <ul className="space-y-8">
           {menuItems.map((item) => (
             <li key={item.path}>
-              <Link 
-                href={item.path}
-                className={`text-3xl font-light uppercase tracking-wider hover:text-amber-300 transition-colors duration-300 ${pathname === item.path ? 'text-amber-300' : 'text-white'}`}
-                onClick={onClose}
-              >
-                {item.name}
-              </Link>
+              {item.external ? (
+                <a 
+                  href={item.path}
+                  className="text-3xl font-light uppercase tracking-wider hover:text-amber-300 transition-colors duration-300 text-white"
+                  onClick={onClose}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {item.name}
+                </a>
+              ) : (
+                <Link 
+                  href={item.path}
+                  className={`text-3xl font-light uppercase tracking-wider hover:text-amber-300 transition-colors duration-300 ${pathname === item.path ? 'text-amber-300' : 'text-white'}`}
+                  onClick={onClose}
+                >
+                  {item.name}
+                </Link>
+              )}
             </li>
           ))}
         </ul>

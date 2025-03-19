@@ -11,7 +11,7 @@ export default function Contact() {
         <div>
           <h2 className="text-2xl font-serif mb-4">Get in Touch</h2>
           <p className="text-gray-300 mb-6">
-            We'd love to hear from you. For reservations, private events, or any inquiries, please fill out the form or use the contact information below.
+            For reservations, private events, or any inquiries, please fill out the form or use the contact information below.
           </p>
           
           <div className="space-y-4 mb-8">

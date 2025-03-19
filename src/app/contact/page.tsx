@@ -1,5 +1,6 @@
 import { PageWrapper } from '@/components/layout/PageWrapper';
 import { Button } from '@/components/ui/Button';
+import { RESTAURANT_ADDRESS, RESTAURANT_PHONE, RESTAURANT_EMAIL, BUSINESS_HOURS } from '@/config';
 
 export default function Contact() {
   return (
@@ -10,26 +11,26 @@ export default function Contact() {
         <div>
           <h2 className="text-2xl font-serif mb-4">Get in Touch</h2>
           <p className="text-gray-300 mb-6">
-            We would love to hear from you. For reservations, private events, or any inquiries, please fill out the form or use the contact information below.
+            We'd love to hear from you. For reservations, private events, or any inquiries, please fill out the form or use the contact information below.
           </p>
           
           <div className="space-y-4 mb-8">
             <div>
               <h3 className="text-lg font-medium mb-1">Address</h3>
-              <p className="text-gray-400">123 Bourbon Street, New Orleans, LA 70116</p>
+              <p className="text-gray-400">{RESTAURANT_ADDRESS}</p>
             </div>
             
             <div>
               <h3 className="text-lg font-medium mb-1">Hours</h3>
-              <p className="text-gray-400">Tuesday - Thursday: 5pm - 12am</p>
-              <p className="text-gray-400">Friday - Saturday: 5pm - 2am</p>
-              <p className="text-gray-400">Sunday - Monday: Closed</p>
+              <p className="text-gray-400">{BUSINESS_HOURS.weekday}</p>
+              <p className="text-gray-400">{BUSINESS_HOURS.weekend}</p>
+              <p className="text-gray-400">{BUSINESS_HOURS.sundayMonday}</p>
             </div>
             
             <div>
               <h3 className="text-lg font-medium mb-1">Contact</h3>
-              <p className="text-gray-400">Phone: (504) 555-1234</p>
-              <p className="text-gray-400">Email: info@speakeasy.com</p>
+              <p className="text-gray-400">Phone: {RESTAURANT_PHONE}</p>
+              <p className="text-gray-400">Email: {RESTAURANT_EMAIL}</p>
             </div>
           </div>
         </div>

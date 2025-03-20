@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-// import Image from 'next/image';
+import Image from 'next/image';
 import { GalleryImage } from '@/types';
 
 interface ImageGalleryProps {
@@ -23,7 +23,7 @@ export const ImageGallery = ({ images, categories = [] }: ImageGalleryProps) => 
 
   return (
     <div>
-      <div className="mb-8 flex overflow-x-auto pb-2 gap-4">
+      <div className="mb-8 flex items-center justify-center overflow-x-auto pb-2 gap-4">
         <button 
           className={`transition-colors ${!activeCategory ? 'text-amber-300' : 'text-white hover:text-amber-300'}`}
           onClick={() => setActiveCategory(null)}
@@ -52,20 +52,21 @@ export const ImageGallery = ({ images, categories = [] }: ImageGalleryProps) => 
             className="overflow-hidden group cursor-pointer"
             onClick={() => setSelectedImage(image)}
           >
-            {/* In a real implementation, replace this with Next.js Image component */}
             <div
               className="w-full relative bg-gray-800 group-hover:scale-105 transition-transform duration-300"
               style={{
                 aspectRatio: `${image.width / image.height}`,
-                backgroundColor: image.category === 'food' 
-                  ? '#996633' 
-                  : image.category === 'drinks' 
-                  ? '#663399' 
-                  : '#334455',
               }}
             >
+              <Image
+                src={image.src}
+                alt={image.alt}
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                className="object-cover"
+              />
               <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-black/60 transition-opacity duration-300">
-                <p className="text-white text-lg">{image.alt}</p>
+                <p className="text-white text-lg p-4 text-center">{image.alt}</p>
               </div>
             </div>
           </div>
@@ -89,18 +90,15 @@ export const ImageGallery = ({ images, categories = [] }: ImageGalleryProps) => 
                 <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
               </svg>
             </button>
-            <div
-              className="w-full bg-gray-800"
-              style={{
-                aspectRatio: `${selectedImage.width / selectedImage.height}`,
-                backgroundColor: selectedImage.category === 'food' 
-                  ? '#996633' 
-                  : selectedImage.category === 'drinks' 
-                  ? '#663399' 
-                  : '#334455',
-              }}
-            >
-              {/* In real implementation, use Next Image here */}
+            <div className="relative" style={{ aspectRatio: `${selectedImage.width / selectedImage.height}` }}>
+              <Image
+                src={selectedImage.src}
+                alt={selectedImage.alt}
+                fill
+                sizes="(max-width: 1536px) 100vw, 1536px" 
+                className="object-contain"
+                priority
+              />
             </div>
             <p className="text-white mt-2">{selectedImage.alt}</p>
           </div>

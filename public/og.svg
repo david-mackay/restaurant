@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Dark green background -->
+  <rect width="1200" height="630" fill="#1A2F1A"/>
+  
+  <!-- Decorative border -->
+  <rect x="40" y="40" width="1120" height="550" stroke="#4A7B4A" stroke-width="2"/>
+  
+  <!-- Large mortar and pestle -->
+  <path d="M500 315C500 235 600 235 600 235C600 235 700 235 700 315C700 395 600 395 600 395C600 395 500 395 500 315Z" fill="#4A7B4A"/>
+  <path d="M580 195L620 195L610 315L590 315L580 195Z" fill="#4A7B4A"/>
+  
+  <!-- Decorative herbs and flourishes -->
+  <path d="M400 235C480 235 480 315 480 315" stroke="#4A7B4A" stroke-width="3"/>
+  <path d="M800 235C720 235 720 315 720 315" stroke="#4A7B4A" stroke-width="3"/>
+  
+  <!-- Text -->
+  <text x="600" y="480" text-anchor="middle" font-family="serif" font-size="72" fill="#E2F0E2">Ye's Apothecary</text>
+  <text x="600" y="530" text-anchor="middle" font-family="serif" font-size="24" fill="#4A7B4A">SPEAKEASY &amp; TEA PARLOUR</text>
+  
+  <!-- Decorative corner elements -->
+  <path d="M80 80L120 80L120 120" stroke="#4A7B4A" stroke-width="2"/>
+  <path d="M1120 80L1080 80L1080 120" stroke="#4A7B4A" stroke-width="2"/>
+  <path d="M80 550L120 550L120 510" stroke="#4A7B4A" stroke-width="2"/>
+  <path d="M1120 550L1080 550L1080 510" stroke="#4A7B4A" stroke-width="2"/>
+</svg> 

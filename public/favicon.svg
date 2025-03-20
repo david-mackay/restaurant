@@ -1,0 +1,33 @@
+<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="300" height="300" fill="#0a4821" />
+  
+  <!-- Outer frame -->
+  <rect x="40" y="40" width="220" height="220" rx="10" ry="10" fill="none" stroke="#d4bc7a" stroke-width="3" />
+  
+  <!-- Inner ornamental frame -->
+  <rect x="50" y="50" width="200" height="200" rx="5" ry="5" fill="none" stroke="#d4bc7a" stroke-width="1.5" />
+  
+  <!-- Decorative corner elements -->
+  <path d="M50,50 L65,65" stroke="#d4bc7a" stroke-width="1.5" />
+  <path d="M250,50 L235,65" stroke="#d4bc7a" stroke-width="1.5" />
+  <path d="M50,250 L65,235" stroke="#d4bc7a" stroke-width="1.5" />
+  <path d="M250,250 L235,235" stroke="#d4bc7a" stroke-width="1.5" />
+  
+  <!-- Central circle -->
+  <circle cx="150" cy="150" r="60" fill="none" stroke="#d4bc7a" stroke-width="2" />
+  
+  <!-- Martini Glass - larger and centered -->
+  <path d="M110,120 L190,120 L150,185 Z" fill="none" stroke="#d4bc7a" stroke-width="2.5" />
+  <line x1="150" y1="185" x2="150" y2="200" stroke="#d4bc7a" stroke-width="2.5" />
+  <line x1="140" y1="200" x2="160" y2="200" stroke="#d4bc7a" stroke-width="2.5" />
+  
+  <!-- Cocktail liquid line -->
+  <path d="M124,140 L176,140" stroke="#d4bc7a" stroke-width="1.5" />
+  
+  <!-- Bottom banner -->
+  <path d="M80,210 L220,210 C220,210 230,215 225,220 C220,225 210,220 210,220 L90,220 C90,220 80,225 75,220 C70,215 80,210 80,210 Z" fill="none" stroke="#d4bc7a" stroke-width="2" />
+  
+  <!-- Bottom text "YE'S APOTHECARY" -->
+  <text x="150" y="218" font-family="serif" font-size="10" fill="#d4bc7a" text-anchor="middle" letter-spacing="1">YE'S APOTHECARY</text>
+</svg>

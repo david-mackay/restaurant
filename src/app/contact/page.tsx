@@ -4,8 +4,6 @@ import { RESTAURANT_ADDRESS, RESTAURANT_PHONE, RESTAURANT_EMAIL, BUSINESS_HOURS 
 export default function Contact() {
   return (
     <PageWrapper className="">
-      <h1 className="section-title text-center mb-12">Contact Us</h1>
-      
       <div className="bg-opacity-20 backdrop-blur-sm rounded-lg p-8 shadow-xl">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div className="space-y-8">
@@ -13,7 +11,6 @@ export default function Contact() {
               <h2 className="text-2xl font-serif mb-4 text-amber-400">Address</h2>
               <p className="text-gray-200 text-lg">{RESTAURANT_ADDRESS}</p>
             </div>
-            
             <div>
               <h2 className="text-2xl font-serif mb-4 text-amber-400">Contact</h2>
               <div className="space-y-2">

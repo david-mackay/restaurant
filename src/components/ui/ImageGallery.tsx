@@ -103,6 +103,7 @@ export const ImmersiveGallery = ({ images, categories = [] }: ImmersiveGalleryPr
 
   return (
     <div className="w-full">
+      <div><br/></div>
       {/* Category Filter */}
       <div className="mb-6 flex flex-wrap items-center justify-center gap-3 px-4">
         <button 

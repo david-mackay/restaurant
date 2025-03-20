@@ -43,7 +43,7 @@ export const NavigationMenu = ({ isOpen, onClose }: NavigationMenuProps) => {
     { name: 'Food', path: '/food' },
     { name: 'Drinks', path: '/drinks' },
     { name: 'Contact', path: '/contact' },
-    { name: 'Reservations', path: 'https://resy.com/cities/ny/yes-apothecary', external: true },
+    { name: 'Reservations', path: 'http://resy.com/link?venue_id=60980', external: true },
     { name: 'Gallery', path: '/gallery' },
   ];
 

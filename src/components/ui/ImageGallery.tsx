@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import Image from 'next/image';
 import { GalleryImage } from '@/types';
 
@@ -26,7 +26,7 @@ export const ImmersiveGallery = ({ images, categories = [] }: ImmersiveGalleryPr
     : [...new Set(images.map((image) => image.category))];
 
   // Handle image transitions
-  const changeImage = (newIndex: number) => {
+  const changeImage = useCallback((newIndex: number) => {
     if (newIndex === mainImageIndex) return;
     
     setIsFading(true);
@@ -36,19 +36,19 @@ export const ImmersiveGallery = ({ images, categories = [] }: ImmersiveGalleryPr
         setIsFading(false);
       }, 50); // Small delay to ensure DOM updates before starting fade-in
     }, transitionDuration);
-  };
+  }, [mainImageIndex, transitionDuration]);
 
-  const goToNextImage = () => {
+  const goToNextImage = useCallback(() => {
     if (isFading || filteredImages.length <= 1) return;
     const newIndex = (mainImageIndex + 1) % filteredImages.length;
     changeImage(newIndex);
-  };
+  }, [isFading, filteredImages.length, mainImageIndex, changeImage]);
 
-  const goToPreviousImage = () => {
+  const goToPreviousImage = useCallback(() => {
     if (isFading || filteredImages.length <= 1) return;
     const newIndex = (mainImageIndex - 1 + filteredImages.length) % filteredImages.length;
     changeImage(newIndex);
-  };
+  }, [isFading, filteredImages.length, mainImageIndex, changeImage]);
 
   // Handle scroll to active thumbnail
   useEffect(() => {
@@ -95,7 +95,7 @@ export const ImmersiveGallery = ({ images, categories = [] }: ImmersiveGalleryPr
     }, 5000);
     
     return () => clearInterval(interval);
-  }, [mainImageIndex, filteredImages, , goToNextImage]);
+  }, [filteredImages, goToNextImage]);
 
   const toggleFullscreen = () => {
     setIsFullscreen(!isFullscreen);

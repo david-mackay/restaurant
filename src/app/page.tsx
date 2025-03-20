@@ -1,6 +1,6 @@
 import { VideoBackground } from '@/components/ui/VideoBackground';
 import { Button } from '@/components/ui/Button';
-import { RESTAURANT_NAME, RESTAURANT_TAGLINE, VIDEO_BACKGROUND_URL } from '@/config';
+import { RESTAURANT_NAME, VIDEO_BACKGROUND_URL } from '@/config';
 import { PageWrapper } from '@/components/layout/PageWrapper';
 
 export default function Home() {

@@ -228,7 +228,8 @@ export const SeamlessPDFViewer = ({ pdfUrl, title }: SeamlessPDFViewerProps) => 
         <div className="flex flex-col items-center my-12 w-full">
           <Loader size="large" />
           <p className="text-center mt-4 text-gray-400">
-            Loading {title || 'PDF'}... {currentProgress > 0 ? `${currentProgress}%` : ''}
+            {title || 'PDF'}<br />
+            {currentProgress > 0 ? `${currentProgress}%` : ''}
           </p>
         </div>
       )}

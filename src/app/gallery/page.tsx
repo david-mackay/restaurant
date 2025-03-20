@@ -1,6 +1,6 @@
 // File: src/app/gallery/page.tsx
 import { PageWrapper } from '@/components/layout/PageWrapper';
-import { ImageGallery } from '@/components/ui/ImageGallery';
+import { ImmersiveGallery } from '@/components/ui/ImageGallery';
 import { getGalleryImages } from '@/utils/gallery';
 
 export default function Gallery() {
@@ -10,7 +10,7 @@ export default function Gallery() {
   return (
     <PageWrapper>
       <h1 className="section-title">Gallery</h1>
-      <ImageGallery images={images} categories={categories} />
+      <ImmersiveGallery images={images} categories={categories} />
     </PageWrapper>
   );
 }

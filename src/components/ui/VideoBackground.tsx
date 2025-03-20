@@ -41,7 +41,7 @@ export const VideoBackground = ({ videoSrc }: VideoBackgroundProps) => {
         playsInline
       />
       <button 
-        className="absolute bottom-4 left-4 bg-black/30 hover:bg-black/50 text-white rounded-full p-2 transition-colors"
+        className="absolute bottom-4 left-4 bg-black/30 hover:bg-black/50 text-white rounded-full p-2 transition-colors z-50"
         onClick={togglePause}
         aria-label={isPaused ? "Play background video" : "Pause background video"}
       >

@@ -9,7 +9,6 @@ export default function Gallery() {
   
   return (
     <PageWrapper>
-      <h1 className="section-title">Gallery</h1>
       <ImmersiveGallery images={images} categories={categories} />
     </PageWrapper>
   );

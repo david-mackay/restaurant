@@ -8,7 +8,7 @@ interface PageWrapperProps {
 
 export const PageWrapper = ({ children, className = '' }: PageWrapperProps) => {
   return (
-    <main className={`min-h-screen overflow-hidden max-w-7xl mx-auto ${className}`}>
+    <main className={`min-h-screen overflow-hidden ${className}`}>
       <Header />
       {children}
     </main>
